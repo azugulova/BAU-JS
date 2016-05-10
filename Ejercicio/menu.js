@@ -21,11 +21,13 @@ function createEvent(){
 
 		} else {
 
-			$('li').click( 
-				function() {
-					$('.sub-menu').slideUp();	
-					$(this).children().slideDown();				
-				});
+			$('li').click(function() {
+				if ($(this).children().next().is(':visible')) {
+					$(this).children().next().slideUp();
+				} else {
+					$(this).children().next().slideToggle();
+				}
+			});
 		}
 
 }
