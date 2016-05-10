@@ -25,7 +25,7 @@ function createEvent(){
 				if ($(this).children().next().is(':visible')) {
 					$(this).children().next().slideUp();
 				} else {
-					$(this).children().next().slideToggle();
+					$(this).children().next().slideDown();
 				}
 			});
 		}
