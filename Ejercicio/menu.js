@@ -47,11 +47,17 @@ $(document).ready(function(){
 
 	$('#mobile-button').click(function(){
 		var menu = $('#menu-container');
-		if (menu.is(':visible') ) {
-			menu.hide();
-		} else {
-			menu.show();
-		}
+		menu.show();
+		$('#mobile-close').show();
+		$('#mobile-button').hide();
+	});
+
+
+	$('#mobile-close').click(function(){
+		var menu = $('#menu-container');
+		menu.hide();
+		$('#mobile-close').hide();
+		$('#mobile-button').show();
 	});
 
 
